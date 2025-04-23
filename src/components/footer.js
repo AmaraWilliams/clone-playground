@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import "../styles/components/footer.css";
 import Logo from "../images/empbytes.jpg";
 import YoutubeLogo from "../images/socialmedia-icons/youtube_icon.png";
-import LinkedinLogo from "../images/socialmedia-icons/linkedin_icon.png";
+import LinkedinLogo from "../images/socialmedia-icons/linkedIn_icon.png";
 import GithubLogo from "../images/socialmedia-icons/github_icon.png";
 import InstagramLogo from "../images/socialmedia-icons/instagram_icon.png";
 
