@@ -1,0 +1,74 @@
+@import "../fonts.css";
+
+.container-footer {
+    background-color: #003057;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    padding: 0px 20px 0px 20px;
+    flex-direction: row;
+}
+
+
+
+footer a:link{
+    color: white;
+}
+
+  footer a:visited {
+    color:white;
+}
+
+footer a:hover{
+    color:#90c7fa;
+}
+
+.icon {
+    width:40px;
+    height:40px;
+}
+
+.grouping {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height:110px;
+   
+}
+
+.text-footer-title {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 2rem;
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.text-heading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text-anchor {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.text-anchor:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+  }
