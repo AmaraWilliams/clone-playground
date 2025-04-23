@@ -1,9 +1,9 @@
 {
-  "name": "web-backend-playground-2025",
+  "name": "empathy-bytes-2023",
   "version": "1.0.0",
   "private": true,
-  "description": "web-backend-playground-2025",
-  "author": "amaraajw",
+  "description": "empathy-bytes-2023",
+  "author": "jamin",
   "keywords": [
     "gatsby"
   ],
@@ -14,6 +14,9 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
+  },
+  "optionalDependencies": {
+    "@parcel/watcher-linux-x64-glibc": "2.2.0"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -33,7 +36,7 @@
     "react-material-ui-carousel": "^3.4.2",
     "react-multi-carousel": "^2.8.2",
     "styled-components": "^6.1.1",
-    "three": "^0.150.1",
+    "three": "^0.169.0",
     "use-device-pixel-ratio": "^1.1.2"
   },
   "devDependencies": {

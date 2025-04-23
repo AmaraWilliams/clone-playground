@@ -8,11 +8,12 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
   },
+  //pathPrefix: "/empathy-bytes-2023",
   plugins: [
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `https://empathy.library.gatech.edu/`,
+        baseUrl: `https://empathybytes.library.gatech.edu`
       },
     },
   ],

@@ -19,7 +19,6 @@ function Newnav({ transparent }) {
     const breakpoint = 80;
     const [scroll, setScroll] = useState("");
     // console.log(withPrefix("/test"));
-    console.log("This is a test hi");
     const onScroll = () => {
         let scroll = 0;
         if (typeof window !== undefined) {
@@ -32,8 +31,14 @@ function Newnav({ transparent }) {
     const navRef = useRef();
 
     const showNavbar = () => {
-        navRef.current.classList.toggle("responsive_nav");
-    }
+        const nav = navRef.current;
+        if (nav.classList.contains("responsive_nav")) {
+          nav.classList.remove("responsive_nav")
+        } else {
+          nav.classList.add("responsive_nav")
+        }
+        //navRef.current.classList.toggle("responsive_nav");
+    };
 
     useEffect(() => {
         // console.log(withPrefix("/test"));
@@ -49,21 +54,36 @@ function Newnav({ transparent }) {
     return (
         <header>
           <div className="nav-logo">
-            <Link to={"/"}>
+            <Link to={"/"} className="logo-link">
             <img
               className= "logo"
               src= {Logo}
               alt="Empathy Bytes Logo"
             />
+            <h2 className="body"> Empathy Bytes</h2>
             </Link>
-            <h1 className="nav-title"> Empathy Bytes</h1>
           </div>
             <nav ref={navRef}>
-                  {/* <Link to={"/projects"}>Projects</Link>
-                  <Link to={"/experiences"}>Experiences</Link>
-                  <Link to={"/about"}>About</Link>
-                  <Link to={"/contact"}>Contact</Link> */}
-                  <Link to={"/playground"}>Playground</Link>
+                  {/* Projects Page */}
+                  <Link to={"/projects"}>
+                    <h3 className="pages">Projects</h3>
+                  </Link>
+                  {/* Experiences page */}
+                  <Link to={"/experiences"}>
+                    <h3 className="pages">Experiences</h3>
+                  </Link>
+                  {/* About page */}
+                  <Link to={"/about"}>
+                    <h3 className="pages">About</h3>
+                  </Link>
+                  {/* Contact page */}
+                  <Link to={"/contact"}>
+                    <h3 className="pages">Contact</h3>
+                  </Link>
+                  {/* Contact page */}
+                  <Link to={"/playground"}>
+                    <h3 className="pages">Playground</h3>
+                  </Link>
                   <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                       <FaTimes/>
                   </button>
@@ -73,7 +93,7 @@ function Newnav({ transparent }) {
               </button>
           
         </header>
-    )
+    );
 }
 
 export default Newnav;

@@ -1,8 +1,11 @@
+/* NEEDS Dynamic sizing: mostly everything (fall 2024) */
+
+
 @import "./fonts.css";
 
 .container-experiences-homepage {
     padding-top: calc(var(--navbar-scrolled-height) + 10vh);
-    padding-bottom: 90px;
+    padding-bottom: 20vh;
     background-color: #004B87;
 }
 .container-half {
@@ -26,8 +29,8 @@
 }
 
 .image-overlay {
-    width: 700px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     z-index: -10;
 }

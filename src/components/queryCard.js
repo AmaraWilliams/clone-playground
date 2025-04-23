@@ -1,10 +1,7 @@
 import React from "react";
 
-import { Link } from "gatsby";
-import useMediaQuery from '@mui/material/useMediaQuery';
 import "../styles/components/interviewcard.css";
 import Grid from "@mui/material/Grid";
-import { CardActionArea } from '@mui/material';
 
 
 /**
@@ -17,57 +14,54 @@ import { CardActionArea } from '@mui/material';
  */
 
 export default function QueryCard(props) {
-    const matches = useMediaQuery('(min-width:800px)');
-    if (matches) {
+    const playgroundObject = props.objects
         return (
-            <section className="int_card">
-                <Link to={props.url} style={{textDecoration:"none", color:"inherit"}}>
-                    <CardActionArea>
-                        <Grid 
-                            container spacing = {2}
-                            alignItems = "center"
-                            justifyContent="space-between"
-                        >
-                            <Grid item xs={4}>
-                                <img className="img-style" src={props.img}/>
-                            </Grid>
-                            {/* <Grid item xs={8}>
-                                <h2 className="ep_title">{props.title}</h2>
-                                <p>By {props.author}</p>
-                                <div className = "summary" dangerouslySetInnerHTML={{ __html: props.body}}/>
-                                <p>{props.date}</p>
-                            </Grid> */}
+            <div>
+            <Grid container spacing={0} alignItems="center" justifyContent="center">
 
-                        </Grid>
-                    </CardActionArea>
-                </Link>
-            </section>
-        );
-    } else {
-        return (
-            <section className="int_card">
-                <Link to={props.url} style={{textDecoration:"none", color:"inherit"}}>
-                    <CardActionArea>
-                        <Grid //component borrowed from MUI
-                            container spacing={2}
-                            alignItems="center"
-                        >
-                            <Grid item xs={4}>
-                                    <img className="img-style" src={props.img}/>
-                            </Grid>
-                            {/* <Grid item xs={8}>
-                                <h2 className="ep_title">{props.title}</h2>
-                                <p>By {props.author}</p>
-                            </Grid>
-                            <Grid item xs={12}>                
-                                <div className="summary" dangerouslySetInnerHTML={{ __html: props.body}}/>
-                                <p>{props.date}</p>               
-                            </Grid> */}
-                        </Grid>
-                    </CardActionArea>
-                </Link>
-            </section>
-        );
-    }
+                <Grid item sm={12} md={8} style={{ padding: "0% 0% 1% 3%" }}>
+                    <h1 className="header-about">{props.subteam} Team</h1>
+                    <div className="horizontal-line" ></div>
+                    <p className="paragraph-about padding-bottom-about">{props.about}</p>
+                </Grid>
+
+                <Grid xs={6}>
+
+                </Grid>
+            </Grid>
+
+            <Grid container spacing={3} alignItems="center" justifyContent="center">
+                
+                    {playgroundObject.map((item) => ( 
+                    
+                    <div>
+                        <div>
+                            <div>
+                                <img src={"https://empathy.library.gatech.edu/" + item.field_pic.uri.url} alt="object"></img>
+                                <p>{item.title}</p>
+                                <p>{item.title}</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>{item.title}</p>
+                        </div>
+                    </div>
+                        
+                ))}
+                
+            </Grid>
+
+           
+
+            <Grid container spacing={3} alignItems="center" justifyContent="center">
+            <p>
+                <a href={props.learnMore} target="_blank" rel="noopener noreferrer">
+                    Learn More
+                </a>
+            </p>
+            </Grid>
+
+        </div>  
+    );
     
 }
